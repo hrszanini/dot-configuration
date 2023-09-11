@@ -38,6 +38,8 @@ call plug#begin()
 	" Themes
 	Plug 'dracula/vim'
 	Plug 'rebelot/kanagawa.nvim'
+	Plug 'tomasiser/vim-code-dark'
+	Plug 'nanotech/jellybeans.vim'
 
 	" Code Highligth
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -69,7 +71,7 @@ call plug#end()
 
 " Color Theme
 set background=dark
-colorscheme kanagawa
+colorscheme jellybeans
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 
