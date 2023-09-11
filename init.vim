@@ -1,41 +1,50 @@
 " NeoVim Config
-set nocompatible            " disable compatibility to old-time vi
+filetype plugin on
+
+set number                  " add line numbers
+set rnu						" relative line numbers
+
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
-set mouse=v					" middle-click paste with 
 set hlsearch				" highlight search 
 set incsearch				" incremental search
+
 set tabstop=4				" number of columns occupied by a tab 
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
-" set expandtab             " converts tabs to white space
+set wildmode=longest,list   " get bash-like tab completions
+
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
-set cc=120                  " set an 80 column border for good coding style
 filetype plugin indent on   " allow auto-indenting depending on file type
-syntax on                   " syntax highlighting
-set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
-filetype plugin on
-set cursorline              " highlight current cursorline
-set ttyfast                 " Speed up scrolling in Vim
-" set spell                 " enable spell check (may need to download language package)
-" set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files.
 
-" Plugins
+set cc=120                  " set an 80 column border for good coding style
+set cursorline              " highlight current cursorline
+syntax on                   " syntax highlighting
+
+set mouse=a                 " enable mouse click
+set mouse=v					" middle-click paste with 
+
+set clipboard=unnamedplus   " using system clipboard
+
+set ttyfast                 " Speed up scrolling in Vim
+
+set nocompatible            " disable compatibility to old-time vi
+
+"Plugins
 call plug#begin()
-	" Utilitaries
-	Plug 'preservim/nerdtree'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'preservim/vimux'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'mhartington/formatter.nvim'
+	" Themes
+	Plug 'dracula/vim'
+	Plug 'rebelot/kanagawa.nvim'
+
+	" Treesitter
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	
-	" Telescope
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+	" Nerdtree
+	Plug 'preservim/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
+
+	" Conquer of Completion
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	
 	" Lazygit
 	Plug 'kdheepak/lazygit.nvim'
@@ -45,23 +54,15 @@ call plug#begin()
 	Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
 	Plug 'romgrk/barbar.nvim'
 
-	" Complementaries
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'vim-airline/vim-airline'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'ap/vim-css-color'
-	Plug 'sheerun/vim-polyglot'
-	Plug 'preservim/vim-markdown'
+	" Telescope
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 
-	" Themes
-	Plug 'dracula/vim'
-	Plug 'rebelot/kanagawa.nvim'
 call plug#end()
 
 " Color Theme
 set background=dark
 colorscheme kanagawa
-
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 
