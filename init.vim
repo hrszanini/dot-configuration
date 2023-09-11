@@ -1,6 +1,9 @@
 " NeoVim Config
 filetype plugin on
 
+set updatetime=300
+set signcolumn=yes
+
 set number                  " add line numbers
 set rnu						" relative line numbers
 
@@ -36,25 +39,25 @@ call plug#begin()
 	Plug 'dracula/vim'
 	Plug 'rebelot/kanagawa.nvim'
 
-	" Treesitter
+	" Code Highligth
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	
-	" Nerdtree
+	" Explorer Tree
 	Plug 'preservim/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 
-	" Conquer of Completion
+	" Code Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	
-	" Lazygit
+	" Git UI
 	Plug 'kdheepak/lazygit.nvim'
 
-	" Tabs Plugin
-	Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
-	Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
+	" Tabs
+	Plug 'nvim-tree/nvim-web-devicons' 
+	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'romgrk/barbar.nvim'
 
-	" Telescope
+	" File/String/Tag Search
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 
@@ -66,7 +69,7 @@ colorscheme kanagawa
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 
-" Leader
+" Leader Map
 let mapleader = " "
 
 " Shortcuts
@@ -97,3 +100,6 @@ nnoremap <silent>	<leader>gg	:LazyGit<CR>
 nnoremap			<leader>w	:w<CR>
 nnoremap			<leader>q	:q<CR>
 
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"

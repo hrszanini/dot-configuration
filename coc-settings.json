@@ -1,3 +1,0 @@
-{
-  "java.jdt.ls.vmargs": "-javaagent:\"/home/hrszanini/.config/coc/extensions/coc-lombok-data/server/lombok.jar\""
-}
