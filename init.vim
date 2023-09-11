@@ -43,8 +43,7 @@ call plug#begin()
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	
 	" Explorer Tree
-	Plug 'preservim/nerdtree'
-	Plug 'ryanoasis/vim-devicons'
+	Plug 'nvim-tree/nvim-tree.lua'
 
 	" Code Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -53,13 +52,18 @@ call plug#begin()
 	Plug 'kdheepak/lazygit.nvim'
 
 	" Tabs
-	Plug 'nvim-tree/nvim-web-devicons' 
 	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'romgrk/barbar.nvim'
 
 	" File/String/Tag Search
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+
+	" Status Line
+	Plug 'nvim-lualine/lualine.nvim'
+
+	" Icons support for others Plugins
+	Plug 'nvim-tree/nvim-web-devicons' 
 
 call plug#end()
 
@@ -88,7 +92,7 @@ nnoremap <silent>   <A-8>		<Cmd>BufferGoto 8<CR>
 nnoremap <silent>   <A-9>		<Cmd>BufferGoto 9<CR>
 nnoremap <silent>   <A-0>		<Cmd>BufferLast<CR>
 
-nnoremap <silent>	<A-e>		<Cmd>NERDTreeToggle<CR>
+nnoremap <silent>	<A-e>		<Cmd>NvimTreeToggle<CR>
 
 nnoremap			<leader>ff	<Cmd>Telescope find_files<cr>
 nnoremap			<leader>fg	<Cmd>Telescope live_grep<cr>
