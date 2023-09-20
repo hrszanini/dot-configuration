@@ -68,7 +68,9 @@ call plug#begin()
 
 	" Icons support for others Plugins
 	Plug 'nvim-tree/nvim-web-devicons' 
-
+	
+	" Start Screen
+	Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Color Theme
