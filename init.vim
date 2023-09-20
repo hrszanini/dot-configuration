@@ -20,7 +20,7 @@ set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 filetype plugin indent on   " allow auto-indenting depending on file type
 
-set cc=80                  " set an 80 column border for good coding style
+set cc=120                  " set an 80 column border for good coding style
 set cursorline              " highlight current cursorline
 syntax on                   " syntax highlighting
 
@@ -41,6 +41,7 @@ call plug#begin()
 	Plug 'tomasiser/vim-code-dark'
 	Plug 'nanotech/jellybeans.vim'
 	Plug 'NLKNguyen/papercolor-theme'
+	Plug 'morhetz/gruvbox'
 
 	" Code Highligth
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -72,9 +73,9 @@ call plug#end()
 
 " Color Theme
 set background=dark
-colorscheme PaperColor
-hi Normal guibg=NONE ctermbg=NONE
-hi NonText guibg=NONE ctermbg=NONE
+colorscheme gruvbox
+" hi Normal guibg=NONE ctermbg=NONE
+" hi NonText guibg=NONE ctermbg=NONE
 
 " Leader Map
 let mapleader = " "
