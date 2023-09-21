@@ -50,8 +50,8 @@ call plug#begin()
 	Plug 'nvim-tree/nvim-tree.lua'
 
 	" Code Completion
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	
+
 	" Git UI
 	Plug 'kdheepak/lazygit.nvim'
 
@@ -83,8 +83,8 @@ colorscheme gruvbox
 let mapleader = " "
 
 " Shortcuts
-nnoremap <silent>	<A-,>		<Cmd>BufferPrevious<CR>
-nnoremap <silent>   <A-.>		<Cmd>BufferNext<CR>
+nnoremap <silent>	<A-Left>	<Cmd>BufferPrevious<CR>
+nnoremap <silent>   <A-Right>	<Cmd>BufferNext<CR>
 nnoremap <silent>   <A-q>		<Cmd>BufferClose<CR>
 nnoremap <silent>   <A-s-q>		<Cmd>BufferRestore<CR>
 nnoremap <silent>	<A-1>		<Cmd>BufferGoto 1<CR>
@@ -104,12 +104,12 @@ nnoremap			<leader>ff	<Cmd>Telescope find_files<cr>
 nnoremap			<leader>fg	<Cmd>Telescope live_grep<cr>
 nnoremap			<leader>fb	<Cmd>Telescope buffers<cr>
 nnoremap			<leader>fh	<Cmd>Telescope help_tags<cr>
+nnoremap			<Leader>fc	<Cmd>lua require'telescope.builtin'.treesitter()<CR>
+nnoremap			<Leader>fw	<Cmd>lua require'telescope.builtin'.lsp_references()<CR>
+nnoremap			<Leader>fp	<Cmd>lua require'telescope.builtin'.builtin()<CR>
 
 nnoremap <silent>	<leader>gg	:LazyGit<CR>
 
 nnoremap			<leader>w	:w<CR>
 nnoremap			<leader>q	:q<CR>
 
-inoremap <silent><expr> <c-space> coc#refresh()
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
