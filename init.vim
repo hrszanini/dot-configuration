@@ -116,7 +116,7 @@ nnoremap <silent>   <A-7>		<Cmd>BufferGoto 7<CR>
 nnoremap <silent>   <A-8>		<Cmd>BufferGoto 8<CR>
 nnoremap <silent>   <A-9>		<Cmd>BufferGoto 9<CR>
 nnoremap <silent>   <A-0>		<Cmd>BufferLast<CR>
-nnoremap <silent>   <A-e>		<Cmd>enew<CR>
+nnoremap <silent>   <F2>		<Cmd>enew<CR>
 
 nnoremap <silent>	<leader>e	<Cmd>NvimTreeToggle<CR>
 
@@ -128,10 +128,11 @@ nnoremap			<Leader>sc	<Cmd>lua require'telescope.builtin'.treesitter()<CR>
 nnoremap			<Leader>sw	<Cmd>lua require'telescope.builtin'.lsp_references()<CR>
 nnoremap			<Leader>st	<Cmd>lua require'telescope.builtin'.builtin()<CR>
 
-nnoremap <silent>	<leader>gg	:LazyGit<CR>
-nnoremap			<leader>m	:Mason<CR>
-nnoremap			<leader>q	:q<CR>
-nnoremap			<leader>w	:call SaveFile()<CR>
+nnoremap			<leader>M		:Mason<CR>
+nnoremap <silent>	<leader>gg		:LazyGit<CR>
+nnoremap			<leader>q		:q<CR>
+nnoremap			<leader><Esc>	:qall!
+nnoremap <silent>	<leader>w		:call SaveFile()<CR>
 
 function! SaveFile()
 	let currentBufferName = bufname('%')
