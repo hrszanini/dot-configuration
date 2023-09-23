@@ -1,7 +1,9 @@
 let g:startify_files_number = 5
 
+let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
+
 let g:startify_bookmarks = [
-			\ {'i': '~/.config/nvim/init.vim' }, 
+			\ {'0': '~/.config/nvim/init.vim' }, 
 			\ {'g': '~/Git/' },
 			\ {'d': '~/Downloads/' },
 			\ ]

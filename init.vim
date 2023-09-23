@@ -51,15 +51,21 @@ call plug#begin()
 
 	" LSP Config 
 	Plug 'neovim/nvim-lspconfig'
-	
+	Plug 'williamboman/mason-lspconfig.nvim'
+
 	" Debugger
 	Plug 'mfussenegger/nvim-dap'
-	
+	Plug 'rcarriga/nvim-dap-ui'
+
 	" Linter
 	Plug 'mfussenegger/nvim-lint'
 	
 	" Formatter
 	Plug 'mhartington/formatter.nvim'
+	
+	" Null LS
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'jose-elias-alvarez/null-ls.nvim'
 
 	" Mason
 	Plug 'williamboman/mason.nvim'
