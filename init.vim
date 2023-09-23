@@ -49,8 +49,21 @@ call plug#begin()
 	" Explorer Tree
 	Plug 'nvim-tree/nvim-tree.lua'
 
-	" Code Completion
+	" LSP Config 
+	Plug 'neovim/nvim-lspconfig'
 	
+	" Debugger
+	Plug 'mfussenegger/nvim-dap'
+	
+	" Linter
+	Plug 'mfussenegger/nvim-lint'
+	
+	" Formatter
+	Plug 'mhartington/formatter.nvim'
+
+	" Mason
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
 
 	" Git UI
 	Plug 'kdheepak/lazygit.nvim'
@@ -100,16 +113,16 @@ nnoremap <silent>   <A-0>		<Cmd>BufferLast<CR>
 
 nnoremap <silent>	<A-e>		<Cmd>NvimTreeToggle<CR>
 
-nnoremap			<leader>ff	<Cmd>Telescope find_files<cr>
-nnoremap			<leader>fg	<Cmd>Telescope live_grep<cr>
-nnoremap			<leader>fb	<Cmd>Telescope buffers<cr>
-nnoremap			<leader>fh	<Cmd>Telescope help_tags<cr>
-nnoremap			<Leader>fc	<Cmd>lua require'telescope.builtin'.treesitter()<CR>
-nnoremap			<Leader>fw	<Cmd>lua require'telescope.builtin'.lsp_references()<CR>
-nnoremap			<Leader>fp	<Cmd>lua require'telescope.builtin'.builtin()<CR>
+nnoremap			<leader>sf	<Cmd>Telescope find_files<cr>
+nnoremap			<leader>sg	<Cmd>Telescope live_grep<cr>
+nnoremap			<leader>sb	<Cmd>Telescope buffers<cr>
+nnoremap			<leader>sh	<Cmd>Telescope help_tags<cr>
+nnoremap			<Leader>sc	<Cmd>lua require'telescope.builtin'.treesitter()<CR>
+nnoremap			<Leader>sw	<Cmd>lua require'telescope.builtin'.lsp_references()<CR>
+nnoremap			<Leader>sp	<Cmd>lua require'telescope.builtin'.builtin()<CR>
 
 nnoremap <silent>	<leader>gg	:LazyGit<CR>
-
+nnoremap <silent>	<leader>f	:Format<CR>
 nnoremap			<leader>w	:w<CR>
 nnoremap			<leader>q	:q<CR>
 

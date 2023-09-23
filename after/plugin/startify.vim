@@ -2,7 +2,8 @@ let g:startify_files_number = 5
 
 let g:startify_bookmarks = [
 			\ {'i': '~/.config/nvim/init.vim' }, 
-			\ {'g': '~/Git/' }
+			\ {'g': '~/Git/' },
+			\ {'d': '~/Downloads/' },
 			\ ]
 
 let g:startify_commands = [
