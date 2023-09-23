@@ -35,120 +35,45 @@ set nocompatible            " disable compatibility to old-time vi
 
 "Plugins
 call plug#begin()
-	" Themes
-	Plug 'dracula/vim'
-	Plug 'rebelot/kanagawa.nvim'
-	Plug 'tomasiser/vim-code-dark'
-	Plug 'nanotech/jellybeans.vim'
-	Plug 'NLKNguyen/papercolor-theme'
-	Plug 'morhetz/gruvbox'
 
-	" Code Highligth
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	
-	" Explorer Tree
-	Plug 'nvim-tree/nvim-tree.lua'
+" Themes
+Plug 'dracula/vim'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'nanotech/jellybeans.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
-	" LSP Config 
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'williamboman/mason-lspconfig.nvim'
+" Code Highligth
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-	" Debugger
-	Plug 'mfussenegger/nvim-dap'
-	Plug 'rcarriga/nvim-dap-ui'
+" Explorer Tree
+Plug 'nvim-tree/nvim-tree.lua'
 
-	" Linter
-	Plug 'mfussenegger/nvim-lint'
-	
-	" Formatter
-	Plug 'mhartington/formatter.nvim'
-	
-	" Null LS
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'jose-elias-alvarez/null-ls.nvim'
+" Git UI
+Plug 'kdheepak/lazygit.nvim'
 
-	" Mason
-	Plug 'williamboman/mason.nvim'
-	Plug 'williamboman/mason-lspconfig.nvim'
+" Tabs
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'romgrk/barbar.nvim'
 
-	" Git UI
-	Plug 'kdheepak/lazygit.nvim'
+" File/String/Tag Search
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 
-	" Tabs
-	Plug 'lewis6991/gitsigns.nvim'
-	Plug 'romgrk/barbar.nvim'
+" Status Line
+Plug 'nvim-lualine/lualine.nvim'
 
-	" File/String/Tag Search
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+" Icons support for others Plugins
+Plug 'nvim-tree/nvim-web-devicons' 
 
-	" Status Line
-	Plug 'nvim-lualine/lualine.nvim'
+" Start Screen
+Plug 'mhinz/vim-startify'
 
-	" Icons support for others Plugins
-	Plug 'nvim-tree/nvim-web-devicons' 
-	
-	" Start Screen
-	Plug 'mhinz/vim-startify'
+" Undo Tree
+Plug 'mbbill/undotree'
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
-
-" Color Theme
-set background=dark
-colorscheme gruvbox
-" hi Normal guibg=NONE ctermbg=NONE
-" hi NonText guibg=NONE ctermbg=NONE
-
-" Leader Map
-let mapleader = " "
-
-" Shortcuts
-nnoremap <silent>	<A-Left>	<Cmd>BufferPrevious<CR>
-nnoremap <silent>   <A-Right>	<Cmd>BufferNext<CR>
-nnoremap <silent>   <A-q>		<Cmd>BufferClose<CR>
-nnoremap <silent>   <A-s-q>		<Cmd>BufferRestore<CR>
-nnoremap <silent>	<A-1>		<Cmd>BufferGoto 1<CR>
-nnoremap <silent>   <A-2>		<Cmd>BufferGoto 2<CR>
-nnoremap <silent>   <A-3>		<Cmd>BufferGoto 3<CR>
-nnoremap <silent>	<A-4>		<Cmd>BufferGoto 4<CR>
-nnoremap <silent>   <A-5>		<Cmd>BufferGoto 5<CR>
-nnoremap <silent>   <A-6>		<Cmd>BufferGoto 6<CR>
-nnoremap <silent>   <A-7>		<Cmd>BufferGoto 7<CR>
-nnoremap <silent>   <A-8>		<Cmd>BufferGoto 8<CR>
-nnoremap <silent>   <A-9>		<Cmd>BufferGoto 9<CR>
-nnoremap <silent>   <A-0>		<Cmd>BufferLast<CR>
-nnoremap <silent>   <F2>		<Cmd>enew<CR>
-
-nnoremap <silent>	<leader>e	<Cmd>NvimTreeToggle<CR>
-
-nnoremap			<leader>sf	<Cmd>Telescope find_files<cr>
-nnoremap			<leader>sg	<Cmd>Telescope live_grep<cr>
-nnoremap			<leader>sb	<Cmd>Telescope buffers<cr>
-nnoremap			<leader>sh	<Cmd>Telescope help_tags<cr>
-nnoremap			<Leader>sc	<Cmd>lua require'telescope.builtin'.treesitter()<CR>
-nnoremap			<Leader>sw	<Cmd>lua require'telescope.builtin'.lsp_references()<CR>
-nnoremap			<Leader>st	<Cmd>lua require'telescope.builtin'.builtin()<CR>
-
-nnoremap			<leader>M		:Mason<CR>
-nnoremap <silent>	<leader>gg		:LazyGit<CR>
-nnoremap			<leader>q		:q<CR>
-nnoremap			<leader><Esc>	:qall!
-nnoremap <silent>	<leader>w		:call SaveFile()<CR>
-
-function! SaveFile()
-	let currentBufferName = bufname('%')
-
-    if empty(currentBufferName)
-        let newBufferName = input('Digite um nome de arquivo: ')
-        if empty(newBufferName)
-            echo "Nome de arquivo inválido."
-            return
-        else
-            execute 'w ' . newBufferName
-        endif
-    else
-        execute 'w ' . currentBufferName
-    endif
-
-    echo "Arquivo salvo: " . bufname('%')
-endfunction
-
