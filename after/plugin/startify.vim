@@ -9,9 +9,6 @@ let g:startify_bookmarks = [
 			\ ]
 
 let g:startify_commands = [
-			\ {'pi': ['Instalar Plugins',	':PlugInstall'			] },
-			\ {'pu': ['Atualizar Plugins',	':PlugUpdate'			] },
-			\ {'pc': ['Limpar Plugins',		':PlugClean'			] },
 			\ ]
 
 let g:startify_lists = [

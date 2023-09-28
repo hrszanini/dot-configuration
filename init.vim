@@ -76,4 +76,9 @@ Plug 'mbbill/undotree'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 call plug#end()
