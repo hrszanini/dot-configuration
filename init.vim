@@ -76,9 +76,23 @@ Plug 'mbbill/undotree'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
+" Code Compleation
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" Code Snippets
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+" Ident Blankline
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
