@@ -1,2 +1,2 @@
-set cc=240
+set cc=200
 
