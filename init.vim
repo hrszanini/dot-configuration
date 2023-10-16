@@ -1,4 +1,4 @@
-" NeoVim Config
+""" General """
 filetype plugin on
 
 set updatetime=300
@@ -33,7 +33,8 @@ set ttyfast                 " Speed up scrolling in Vim
 
 set nocompatible            " disable compatibility to old-time vi
 
-"Plugins
+
+""" Plugins """
 call plug#begin()
 
 " Themes

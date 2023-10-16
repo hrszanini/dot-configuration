@@ -1,8 +1,8 @@
 " Color Theme
 set background=dark
-colorscheme gruvbox
+colorscheme kanagawa
 
 " Transparency
-" hi Normal guibg=NONE ctermbg=NONE
-" hi NonText guibg=NONE ctermbg=NONE
+ hi Normal guibg=NONE ctermbg=NONE
+ hi NonText guibg=NONE ctermbg=NONE
 

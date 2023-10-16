@@ -64,6 +64,8 @@ lua <<EOF
 	vim.keymap.set("n", "<leader>d<Right>", vim.diagnostic.goto_next, {buffer=0})
 	vim.keymap.set("n", "<leader>d<Left>", vim.diagnostic.goto_prev, {buffer=0})
 	vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0})
+	require("ibl").setup()
+	plugins.pycodestyle.maxLineLength = 120
 	end,
   }
 EOF
