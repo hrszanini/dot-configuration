@@ -25,7 +25,6 @@ set cursorline              " highlight current cursorline
 syntax on                   " syntax highlighting
 
 set mouse=a                 " enable mouse click
-set mouse=v					" middle-click paste with 
 
 set clipboard=unnamedplus   " using system clipboard
 
