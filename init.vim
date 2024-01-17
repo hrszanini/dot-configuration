@@ -46,6 +46,7 @@ Plug 'morhetz/gruvbox'
 
 " Code Highligth
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Explorer Tree
 Plug 'nvim-tree/nvim-tree.lua'

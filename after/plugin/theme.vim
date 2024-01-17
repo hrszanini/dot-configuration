@@ -6,3 +6,6 @@ colorscheme kanagawa
 " hi Normal guibg=NONE ctermbg=NONE
 " hi NonText guibg=NONE ctermbg=NONE
 
+lua << END
+	require'colorizer'.setup()
+END
