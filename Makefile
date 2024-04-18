@@ -12,6 +12,20 @@ fish-backup:
 
 backup: nvim-backup ranger-backup tmux-backup fish-backup
 
+nvim-save:
+	cp -rf ~/.config/nvim ./nvim 
+
+ranger-save:
+	cp -rf ~/.config/ranger ./ranger 
+
+tmux-save:
+	cp -rf ~/.config/tmux ./tmux 
+
+fish-save:
+	cp -rf ~/.config/fish ./fish 
+
+save: nvim-save ranger-save tmux-save fish-save 
+
 nvim-install:
 	cp -rf ./nvim ~/.config/nvim
 
@@ -22,6 +36,6 @@ tmux-install:
 	cp -rf ./tmux ~/.config/tmux
 
 fish-install:
-	cp -rf ./fish ~/.config/tmux
+	cp -rf ./fish ~/.config/fish
 
 install: nvim-install ranger-install tmux-install fish-install 
