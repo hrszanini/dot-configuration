@@ -9,8 +9,13 @@ function fish_greeting
     "Yeah man!" \
     "Acho que você não tá querendo mexer no terminal não..." \
     "Que tela bonita!" \
-    "Aaah! Que delícia de terminal, cara!"
+    "Aaah! Que delícia de terminal, cara!" \
+    "Gosta de curl não, porra?"
     echo $(random choice $sentences)
+end
+
+if test -d "$HOME/.local/bin"
+    set PATH $HOME/.local/bin $PATH
 end
 
 thefuck --alias | source

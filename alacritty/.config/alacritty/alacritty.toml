@@ -1,0 +1,16 @@
+[window]
+
+decorations = "None"
+startup_mode = "Fullscreen"
+
+padding = { x = 3, y = 3 }
+
+
+[font]
+
+normal.family = "DroidSansM Nerd Font"
+bold.family = "DroidSansM Nerd Font"
+italic.family = "DroidSansM Nerd Font"
+bold_italic.family = "DroidSansM Nerd Font"
+
+size = 10

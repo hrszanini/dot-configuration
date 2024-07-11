@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --path PATH:/home/hrszanini/\x2elocal/bin\x1e/home/hrszanini/\x2ecargo/bin\x1e/usr/local/bin\x1e/usr/local/sbin\x1e/usr/bin\x1e/usr/sbin
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
