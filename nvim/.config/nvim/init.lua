@@ -21,6 +21,12 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+-- Godot Fix
+-- local projectfile = vim.fn.getcwd() .. '/project.godot'
+-- if projectfile then
+--   vim.fn.serverstart './godothost'
+-- end
+
 -- [[ Configure and install plugins ]]
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically

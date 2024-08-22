@@ -35,3 +35,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save File' })
+
+vim.keymap.set('n', '<A-h>', '<C-PageUp>', { desc = 'Next Tab' })
+vim.keymap.set('n', '<A-l>', '<C-PageDown>', { desc = 'Previous Tab' })
+vim.keymap.set('n', '<A-q>', ':tabclose<CR>', { desc = 'Close Tab' })
+vim.keymap.set('n', '<A-e>', ':tabnew<CR>', { desc = 'Open new empty Tab' })
