@@ -19,3 +19,5 @@ if test -d "$HOME/.local/bin"
 end
 
 thefuck --alias | source
+
+export JAVA_HOME="/usr/lib/jvm/java"
