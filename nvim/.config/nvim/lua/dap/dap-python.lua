@@ -4,7 +4,8 @@ return {
     'mfussenegger/nvim-dap',
   },
   config = function(_, opts)
-    local path = '~/.local/share/nvim/mason/packages/debugpy/venv/bin/python'
-    require('dap-python').setup(path)
+    local mason_registry = require 'mason-registry'
+    local install_path = mason_registry.get_package('debugpy'):get_install_path()
+    require('dap-python').setup(install_path)
   end,
 }
