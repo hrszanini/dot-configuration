@@ -21,3 +21,7 @@ end
 thefuck --alias | source
 
 export JAVA_HOME="/usr/lib/jvm/java"
+export EDITOR="/usr/bin/nvim"
+
+alias gitwork='git config --global user.email hamilton.silva@fotosensores.com'
+alias gitpersonal='git config --global user.email hrszanini@gmail.com'

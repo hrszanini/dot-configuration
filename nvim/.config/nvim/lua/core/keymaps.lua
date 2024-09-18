@@ -40,3 +40,5 @@ vim.keymap.set('n', '<A-h>', '<C-PageUp>', { desc = 'Next Tab' })
 vim.keymap.set('n', '<A-l>', '<C-PageDown>', { desc = 'Previous Tab' })
 vim.keymap.set('n', '<A-q>', ':tabclose<CR>', { desc = 'Close Tab' })
 vim.keymap.set('n', '<A-e>', ':tabnew<CR>', { desc = 'Open new empty Tab' })
+
+-- Persist Sessions

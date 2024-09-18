@@ -7,17 +7,14 @@ return {
     wk.setup()
 
     wk.add {
-      ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-      ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-      ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-      ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-      ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-      ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-      ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
+      { '<leader>c', desc = '[C]ode' },
+      { '<leader>s', desc = '[S]earch' },
+      { '<leader>d', desc = '[D]ocument' },
+      { '<leader>r', desc = '[R]ename' },
+      { '<leader>w', desc = '[W]orkspace' },
+      { '<leader>t', desc = '[T]oggle' },
+      { '<leader>h', desc = 'Git [H]unk' },
+      { '<leader>J', desc = '[J]ava Create Files' },
     }
-
-    wk.add({
-      ['<leader>h'] = { 'Git [H]unk' },
-    }, { mode = 'v' })
   end,
 }
