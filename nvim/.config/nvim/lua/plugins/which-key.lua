@@ -15,6 +15,7 @@ return {
       { '<leader>t', desc = '[T]oggle' },
       { '<leader>h', desc = 'Git [H]unk' },
       { '<leader>J', desc = '[J]ava Create Files' },
+      { '<leader>u', desc = '[U]ndo Tree' },
     }
   end,
 }

@@ -32,18 +32,6 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'numToStr/Comment.nvim',
 
-  -- NOTE:Theme
-  {
-    'AlexvZyl/nordic.nvim',
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'nordic'
-
-      vim.cmd.hi 'Comment gui=none'
-      --vim.cmd.hi 'Normal guibg=NONE ctermbg=NONE'
-    end,
-  },
-
   -- Highlight todo, notes, etc in comments
   {
     'folke/todo-comments.nvim',
@@ -59,13 +47,13 @@ require('lazy').setup({
 
       require('mini.surround').setup()
 
-      local statusline = require 'mini.statusline'
-      statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      ---@diagnostic disable-next-line: duplicate-set-field
-      statusline.section_location = function()
-        return '%2l:%-2v'
-      end
+      -- local statusline = require 'mini.statusline'
+      -- statusline.setup { use_icons = vim.g.have_nerd_font }
+      --
+      -- ---@diagnostic disable-next-line: duplicate-set-field
+      -- statusline.section_location = function()
+      --   return '%2l:%-2v'
+      -- end
     end,
   },
 

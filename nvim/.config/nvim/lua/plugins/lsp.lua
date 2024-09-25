@@ -78,6 +78,7 @@ return { -- LSP Configuration & Plugins
       'stylua', -- Used to format Lua code
       'jdtls',
       'pyright',
+      'markdownlint',
     })
 
     local prevent_setup = {
