@@ -21,7 +21,7 @@ if test -d "$HOME/.local/bin"
     set PATH $HOME/.local/bin $PATH
 end
 
-thefuck --alias | source
+export STARSHIP_CONFIG=~/.config/fish/starship.toml
 
 export JAVA_HOME="/usr/lib/jvm/java"
 export EDITOR="/usr/bin/nvim"

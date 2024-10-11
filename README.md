@@ -1,2 +1,24 @@
 # Arquivos de configuração
-Para utilizar estes arquivos, basta instalar o comando [_stow_](https://www.gnu.org/software/stow/manual/stow.html), e escolher o pacote que será aplicado a partir do seu diretório _home_, utilizando a estrutura da árvore dentro de cada pacote.
+Arquivos de configuração de ambiente linux, dividos em pacotes para fácil instalação e configuração.
+
+## Requisito
+
+* Ter instalado o comando [_stow_](https://www.gnu.org/software/stow/manual/stow.html)
+
+## Pacotes
+
+Para instalar um pacote basta executar o comando:
+
+`make install-PACOTE`
+
+
+### Terminal
+
+* Fish
+* Allacritty
+* Starship
+
+### Utils
+
+* Ranger
+* Tmux
