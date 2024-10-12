@@ -2,9 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-export STARSHIP_CONFIG=~/.config/fish/starship.toml
-starship init fish | source
-
 function fish_greeting
     set sentences \
     "Yeah man!" \
@@ -29,3 +26,6 @@ alias gitwork='git config --global user.email hamilton.silva@fotosensores.com'
 alias gitpersonal='git config --global user.email hrszanini@gmail.com'
 alias miniserver='ssh -t root@192.168.15.13 "tmux new -A -s remote"'
 alias local='tmux new -A -s local'
+
+set STARSHIP_CONFIG ~/.config/fish/starship.toml
+starship init fish | source
