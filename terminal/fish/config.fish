@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+export STARSHIP_CONFIG=~/.config/fish/starship.toml
 starship init fish | source
 
 function fish_greeting
@@ -20,8 +21,6 @@ end
 if test -d "$HOME/.local/bin"
     set PATH $HOME/.local/bin $PATH
 end
-
-export STARSHIP_CONFIG=~/.config/fish/starship.toml
 
 export JAVA_HOME="/usr/lib/jvm/java"
 export EDITOR="/usr/bin/nvim"
