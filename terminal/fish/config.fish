@@ -28,4 +28,5 @@ alias miniserver='ssh -t root@192.168.15.13 "tmux new -A -s remote"'
 alias local='tmux new -A -s local'
 
 set STARSHIP_CONFIG ~/.config/fish/starship.toml
+export STARSHIP_CONFIG=~/.config/fish/starship.toml
 starship init fish | source

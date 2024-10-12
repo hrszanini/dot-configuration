@@ -1,13 +1,15 @@
+import = [
+    "~/.config/alacritty/theme.toml"
+]
+
 [window]
 padding = { x = 3, y = 0 }
 opacity = 0.9
-
+decorations = "None"
+startup_mode = "Maximized"
 
 [font]
-normal.family = "DroidSansM Nerd Font"
-bold.family = "DroidSansM Nerd Font"
-italic.family = "DroidSansM Nerd Font"
-bold_italic.family = "DroidSansM Nerd Font"
+normal.family = "Hack Nerd Font"
 size = 10
 
 
@@ -21,12 +23,6 @@ bindings = [
 	{ key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
 	{ key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
 ]
-
-
-[colors]
-primary = { "background" = "0x191919", "foreground" = "0xeaeaea" }
-cursor = { "cursor" = "0xff2600", "text" = "0xf1c1c1" }
-
 
 [shell]
 program = "/usr/bin/fish"
