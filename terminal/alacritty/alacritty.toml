@@ -1,6 +1,3 @@
-import = [
-    "~/.config/alacritty/theme.toml"
-]
 
 [window]
 padding = { x = 3, y = 0 }
@@ -24,8 +21,15 @@ bindings = [
 	{ key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
 ]
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/fish"
 
 [env]
 TERM = "xterm-256color"
+
+[general]
+import = [
+    "~/.config/alacritty/theme.toml"
+]
+
+[terminal]
