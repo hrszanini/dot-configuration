@@ -15,7 +15,8 @@ EXTENSIONS = {}
 for extensions, icon in [
     ('py pyc', '🐍'),
     ('yml ini', '⚙ '),
-    ('java', '☕')
+    ('java', ' '),
+    ('c', '')
 ]:
     EXTENSIONS.update(dict(zip(extensions.split(), repeat(icon))))
 
