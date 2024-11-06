@@ -1,7 +1,7 @@
 
 [window]
-padding = { x = 3, y = 0 }
-opacity = 0.9
+padding = { x = 3, y = 3 }
+opacity = 0.8
 decorations = "None"
 startup_mode = "Maximized"
 
