@@ -6,6 +6,7 @@ if test -d "$HOME/.local/bin"
     set PATH $HOME/.local/bin $PATH
 end
 
-set STARSHIP_CONFIG ~/.config/fish/starship.toml
+set -gx STARSHIP_CONFIG ~/.config/fish/starship.toml
 
 starship init fish | source
+source /opt/asdf-vm/asdf.fish
