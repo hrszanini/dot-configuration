@@ -1,3 +1,3 @@
 function bg-image
-	ln --force $argv[2] ~/.cache/hyprpaper/$argv[1]
+	ln --force $argv[2] ~/.cache/background/$argv[1]
 end

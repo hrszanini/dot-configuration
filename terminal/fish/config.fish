@@ -9,4 +9,3 @@ end
 set -gx STARSHIP_CONFIG ~/.config/fish/starship.toml
 
 starship init fish | source
-source /opt/asdf-vm/asdf.fish
