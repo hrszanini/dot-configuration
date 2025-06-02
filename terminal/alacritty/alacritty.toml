@@ -1,4 +1,3 @@
-
 [window]
 padding = { x = 3, y = 3 }
 opacity = 0.8
@@ -6,13 +5,11 @@ decorations = "None"
 startup_mode = "Maximized"
 
 [font]
-normal.family = "Hack Nerd Font"
+normal.family = "JetBrains Mono Nerd Font"
 size = 10
-
 
 [mouse]
 hide_when_typing = true
-
 
 [keyboard]
 bindings = [
@@ -22,7 +19,7 @@ bindings = [
 ]
 
 [terminal.shell]
-program = "/usr/bin/fish"
+program = "/usr/bin/zsh"
 
 [env]
 TERM = "xterm-256color"
@@ -32,4 +29,3 @@ import = [
     "~/.config/alacritty/theme.toml"
 ]
 
-[terminal]

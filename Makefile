@@ -1,19 +1,14 @@
 install-terminal:
+	sudo dnf -y install alacritty tmux fish ranger htop
 	stow -t ~/.config terminal
+	git clone https://github.com/tmux-plugins/tpm ./terminal/tmux/plugins/tpm
 
 uninstall-terminal:
 	stow -D -t ~/.config terminal
 
-install-utils:
-	git clone https://github.com/tmux-plugins/tpm ./utils/tmux/plugins/tpm
-	stow -t ~/.config utils
+install-sway:
+	stow -t ~/.config sway
 
-uninstall-utils:
-	stow -D -t ~/.config utils
+uninstall-sway:
+	stow -D -t ~/.config sway
 
-install-hyprland:
-	cp ./hyprland/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
-	stow -t ~/.config --ignore=hyprland.conf hyprland
-
-uninstall-hyprland:
-	stow -D -t ~/.config hyprland
