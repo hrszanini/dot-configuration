@@ -1,12 +1,12 @@
 [window]
 padding = { x = 3, y = 3 }
-opacity = 0.8
+opacity = 1.0
 decorations = "None"
 startup_mode = "Maximized"
 
 [font]
-normal.family = "JetBrains Mono Nerd Font"
-size = 10
+normal.family = "Ubuntu Mono Nerd Font"
+size = 12
 
 [mouse]
 hide_when_typing = true
