@@ -1,12 +1,12 @@
-"Pensou, não é XGH"
-"Existem 3 formas de se resolver um problema, a correta, a errada e a XGH, que é igual à errada, só que mais rápida
+Pensou, não é XGH
+Existem 3 formas de se resolver um problema, a correta, a errada e a XGH, que é igual à errada, só que mais rápida
 Quanto mais XGH você faz, mais precisará fazer
 XGH é totalmente reativo
 XGH vale tudo, só não vale dar o toba
 Commit sempre antes de update
 XGH não tem prazo
-Esteja preparado para pular fora quando o barco começar a afundar… ou coloque a culpa em alguém ou algo
-Seja autêntico, XGH não respeita padrões
+Esteja preparado para pular fora quando o barco começar a afundar... ou coloque a culpa em alguém ou algo
+Seja autêntico, XGH não respeita  padrões
 Não existe refactoring, apenas rework
 XGH é totalmente anárquico
 Se iluda sempre com promessas de melhorias
@@ -19,4 +19,4 @@ O XGH é seu brother, mas é vingativo
 Se tiver funcionando, não rela a mão
 Teste é para os fracos
 Acostume-se ao sentimento de fracasso iminente
-O problema só é seu quando seu nome está no Doc da classe"
+O problema só é seu quando seu nome está no Doc da classe
